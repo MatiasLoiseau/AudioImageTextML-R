@@ -1,48 +1,89 @@
 # AudioImageTextML-R
 
-This repository contains the final project for a Machine Learning course, focusing on three different data modalities: audio, images, and text.
+This repository contains the final project for a Machine Learning course, focusing on processing and analyzing data from three different modalities: audio, images, and text. Each modality is handled using specialized libraries and techniques.
 
 ## Features
-- **Audio Processing**
-- **Image Processing**
-- **Text Processing**
 
-## Prerequisites
+### **Audio Processing**
+- Analyze metadata of audio files (duration, sampling rate, channels, etc.).
+- Plot waveforms and zoom into specific segments.
+- Generate periodograms and spectrograms.
+- Apply filters (low-pass and high-pass) to audio signals.
+- Use R libraries: `tuneR`, `seewave`.
 
-- **R (>= 4.4)**
-- Required system libraries for R packages:
-  - `libtiff-dev`
-  - `libjpeg-dev`
-  - `libpng-dev`
-  - `libmagick++-dev`
-  - `sox` (for audio processing)
+### **Image Processing**
+- Perform PCA (Principal Component Analysis) on image color channels to reconstruct and compress images.
+- Visualize original and reconstructed images with a varying number of principal components.
+- Save and compare sizes of original and compressed images.
+- Use R library: `imager`.
 
-To install R on Ubuntu 24.10:
+### **Text Processing**
+- Clean text data by removing punctuation, numbers, extra whitespace, and stopwords.
+- Generate term-document matrices (bag-of-words representation).
+- Calculate word frequencies and identify the most frequent words.
+- Visualize word frequency distributions using word clouds.
+- Use R libraries: `tm`, `wordcloud`.
 
-```bash
-sudo apt update
-sudo apt install -y r-base
-```
+## Project Structure
 
-### Installing System Libraries
+AudioImageTextML-R/
+├── Audio/
+│   ├── R scripts for audio analysis
+│   ├── Sample audio files (e.g., "baby_background.wav", "piano.wav")
+├── Image/
+│   ├── R scripts for image processing
+│   ├── Sample image files (e.g., "dukes.jpeg")
+├── Text/
+│   ├── R scripts for text processing
+│   ├── Sample text files (e.g., "i_have_a_dream.txt")
+├── README.md
 
-Run the following commands to install the necessary libraries on Ubuntu 24.10:
+## Getting Started
 
-```bash
-sudo apt update
-sudo apt install -y libtiff-dev libjpeg-dev libpng-dev libmagick++-dev sox
-```
+### Prerequisites
+- R programming environment
+- Required R libraries:
+  - **Audio**: `tuneR`, `seewave`
+  - **Image**: `imager`
+  - **Text**: `tm`, `wordcloud`
 
-## Installing R Packages
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/MatiasLoiseau/AudioImageTextML-R.git
+   ```
+2. Navigate to the desired modality directory (`Audio/`, `Image/`, or `Text/`).
+3. Ensure all required libraries are installed in R.
 
-After installing the prerequisites, install the required R packages by running the following commands inside R:
+### Running the Code
+Each directory contains R scripts tailored to the respective modality. Example steps:
+1. **Audio**: Analyze audio files using scripts in the `Audio/` directory.
+   ```R
+   source("audio.R")
+   ```
+2. **Image**: Apply PCA to compress images using scripts in the `Image/` directory.
+   ```R
+   source("image.R")
+   ```
+3. **Text**: Process text and generate word clouds using scripts in the `Text/` directory.
+   ```R
+   source("text.R")
+   ```
 
-```R
-# audio
-install.packages("tuneR")
-install.packages("seewave")
+---
 
-# image
-install.packages("imager")
-install.packages("magick")
-```
+## Example Outputs
+
+### Audio
+- Waveforms and zoomed segments.
+- Periodograms and spectrograms.
+- Filtered audio with low-pass and high-pass frequency cutoffs.
+
+### Image
+- Reconstructed images with different numbers of principal components.
+- Comparison of original and compressed image sizes.
+
+### Text
+- Word cloud visualizations.
+- Most frequent word identification.
+- Bag-of-words representation with term-document matrices.
