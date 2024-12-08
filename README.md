@@ -24,20 +24,6 @@ This repository contains the final project for a Machine Learning course, focusi
 - Visualize word frequency distributions using word clouds.
 - Use R libraries: `tm`, `wordcloud`.
 
-## Project Structure
-
-AudioImageTextML-R/
-├── Audio/
-│   ├── R scripts for audio analysis
-│   ├── Sample audio files (e.g., "baby_background.wav", "piano.wav")
-├── Image/
-│   ├── R scripts for image processing
-│   ├── Sample image files (e.g., "dukes.jpeg")
-├── Text/
-│   ├── R scripts for text processing
-│   ├── Sample text files (e.g., "i_have_a_dream.txt")
-├── README.md
-
 ## Getting Started
 
 ### Prerequisites
